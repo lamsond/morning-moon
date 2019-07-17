@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.list{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.list li{
+    border: 2px solid white;
+}
+
+.list h2{
+    display: inline;
+    border: 2px solid blue;
+}
+
+.list a{
+    color: hsl(10, 100%, 80%);
+}
+
+.list a:hover{
+    color: hsl(10, 100%, 65%);
+}
+
+.top{
+    background-color: hsl(10, 0%, 25%);
+}
