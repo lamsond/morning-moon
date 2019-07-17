@@ -1,3 +1,15 @@
 html{
+    background-color: hsl(10, 0%, 100%);
+}
+
+h1{
     background-color: 	hsl(10, 100%, 80%);
+}
+
+p{
+    background-color: 	hsl(130, 100%, 80%);
+}
+
+code{
+    background-color: 	hsl(250, 100%, 80%);
 }
