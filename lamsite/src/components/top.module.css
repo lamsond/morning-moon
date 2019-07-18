@@ -1,23 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 .list{
     display: flex;
     list-style-type: none;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
-    border: 2px solid white;
+    width: 100%;
+    margin: 0;
 }
 
 .list li{
-    border: 2px solid white;
-}
-
-.list h2{
-    display: inline;
-    border: 2px solid blue;
+    margin: 14px 7px 14px 7px;
 }
 
 .list a{
@@ -29,5 +20,5 @@
 }
 
 .top{
-    background-color: hsl(10, 0%, 25%);
+    background-color: hsl(190, 35%, 25%);
 }

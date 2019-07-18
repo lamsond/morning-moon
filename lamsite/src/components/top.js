@@ -6,11 +6,10 @@ export default () => {
     return (
         <div className={topStyles.top}>
             <ul  className={topStyles.list}>
-                <li><h2><a href='/'>lamsite</a></h2></li>
-                <li><h2><a href='/'>courses</a></h2></li>
-                <li><h2><a href='/'>showcase</a></h2></li>
-                <li><h2><a href='/'>blog</a></h2></li>
-                <li><h2><a href='/'>about</a></h2></li>
+                <li><h5><a href='/'>courses</a></h5></li>
+                <li><h5><a href='/'>showcase</a></h5></li>
+                <li><h5><a href='/'>blog</a></h5></li>
+                <li><h5><a href='/'>about</a></h5></li>
             </ul>
         </div>
     );
