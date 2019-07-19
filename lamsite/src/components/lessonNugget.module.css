@@ -1,0 +1,7 @@
+.read{
+    color: hsl(10, 100%, 50%);
+}
+
+.read:hover{
+    color: hsl(10, 100%, 35%);
+}
