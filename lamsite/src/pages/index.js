@@ -30,7 +30,7 @@ query {
         node {
           id
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             subject
             title
           }
