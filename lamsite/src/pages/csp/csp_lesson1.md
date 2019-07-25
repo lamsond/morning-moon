@@ -1,6 +1,7 @@
 ---
-title: "Variables"
-date: "2019-07-23"
+title: "Personal Innovations"
+unit: "The Internet"
+date: "2019-09-04"
 subject: "AP Computer Science Principles"
 ---
 Lorem ipsum **dolor** sit amet, consectetur adipiscing 
