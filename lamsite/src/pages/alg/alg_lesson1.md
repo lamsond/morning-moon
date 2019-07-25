@@ -1,8 +1,8 @@
 ---
 title: "Graphing Hyperbolas"
+unit: Conic Sections
 date: "2019-07-22"
 subject: "Algebra 1"
-unit: Conic Sections
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing 
 elit, sed do eiusmod tempor incididunt ut labore et 

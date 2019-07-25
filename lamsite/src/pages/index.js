@@ -15,8 +15,9 @@ export default ({ data }) => {
                 date={node.frontmatter.date}
                 subject={node.frontmatter.subject}
                 title={node.frontmatter.title}
+                unit={node.frontmatter.unit}
                 text={node.excerpt}
-                slug={node.fields.slug} 
+                slug={node.fields.slug}
             />
         ))}
     </Layout>
@@ -34,6 +35,7 @@ query {
             date(formatString: "MMMM DD, YYYY")
             subject
             title
+            unit
           }
           excerpt
           fields{
