@@ -22,3 +22,8 @@
 .top{
     background-color: hsl(190, 35%, 25%);
 }
+
+.logo{
+    font-style: normal;
+    text-transform: none;
+}
