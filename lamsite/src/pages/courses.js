@@ -5,6 +5,7 @@ export default () => (
 <Layout>
     <h1>courses</h1>
     <ul>
+        <li>Intro to Coding: Summer Enrichment Course</li>
         <li>MA101: Algebra 1</li>
         <li>CP501: AP Computer Science Principles</li>
         <li>CP502: AP Computer Science A</li>
