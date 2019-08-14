@@ -4,8 +4,4 @@ unit: "Scratch"
 date: "2019-08-12"
 subject: "CS Bootcamp"
 ---
-Lorem ipsum **dolor** sit amet, consectetur adipiscing 
-elit, sed do eiusmod tempor incididunt ut labore et 
-dolore magna aliqua. Ut enim ad minim veniam, quis 
-nostrud exercitation ullamco laboris nisi ut aliquip 
-ex ea commodo consequat.
+We will begin by taking a look at error detection methods including **parity bits** and **checksums**. We defined computer science and looked at MIT's **Scratch** programming language. We performed several activities that allow us to move the cat around the screen.
