@@ -1,14 +1,47 @@
 import React from "react"
 import Layout from "../components/layout.js";
+import LessonList from "../components/lessonList.js";
+import coursesStyles from './courses.module.css';
+import { graphql } from 'gatsby';
 
-export default () => (
+export default ({ data }) => (
 <Layout>
-    <h1>courses</h1>
-    <ul>
-        <li>Intro to Coding: Summer Enrichment Course</li>
-        <li>MA101: Algebra 1</li>
-        <li>CP501: AP Computer Science Principles</li>
-        <li>CP502: AP Computer Science A</li>
+    <h1>Courses</h1>
+    <ul className={coursesStyles.list}>
+        <li>Algebra 1
+            <ul>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                <LessonList 
+                    key={node.id}
+                    title={node.frontmatter.title}
+                    slug={node.fields.slug}
+                />))}
+            </ul>
+        </li>
+        
+        <li>AP Computer Science Principles</li>
+        <li>AP Computer Science A</li>
     </ul>
 </Layout>
 );
+
+export const query = graphql`
+query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
+      filter: { frontmatter: {subject: {eq: "Algebra 1"}}
+      }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            subject
+            title
+          }
+          fields{
+              slug
+          }
+        }
+      }
+    }
+  }
+  `;
