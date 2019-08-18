@@ -16,3 +16,11 @@ must show the following
   * due dates
 
 * page headings
+
+  * Recent Lessons and Assignments
+
+* navbar
+* footer
+
+  * timing of updates
+  * credits

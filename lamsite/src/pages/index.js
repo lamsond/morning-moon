@@ -8,7 +8,7 @@ export default ({ data }) => {
     console.log(data);
     return (
     <Layout>
-        <h1>{ data.allMarkdownRemark.totalCount } Lessons</h1>
+        <h1>Recent Lessons and Assignments</h1>
         {data.allMarkdownRemark.edges.map(({ node }) => (
             <LessonNugget 
                 key={node.id}
@@ -26,7 +26,9 @@ export default ({ data }) => {
 
 export const query = graphql`
 query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
+      filter: { frontmatter: {date: {eq: "2019-09-04"}}
+      }) {
       totalCount
       edges {
         node {
