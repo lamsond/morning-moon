@@ -5,3 +5,8 @@
 .read:hover{
     color: hsl(10, 100%, 35%);
 }
+
+.hw_label{
+    color: hsl(190, 35%, 25%);
+    display: inline-block;
+}

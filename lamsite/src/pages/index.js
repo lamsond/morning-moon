@@ -5,7 +5,6 @@ import Layout from "../components/layout.js";
 import LessonNugget from '../components/lessonNugget.js';
 
 export default ({ data }) => {
-    console.log(data);
     return (
     <Layout>
         <h1>Recent Lessons and Assignments</h1>
@@ -16,8 +15,9 @@ export default ({ data }) => {
                 subject={node.frontmatter.subject}
                 title={node.frontmatter.title}
                 unit={node.frontmatter.unit}
-                text={node.excerpt}
+                excerpt={node.excerpt}
                 slug={node.fields.slug}
+                homework={node.frontmatter.homework}
             />
         ))}
     </Layout>
@@ -29,7 +29,6 @@ query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
       filter: { frontmatter: {date: {eq: "2019-09-04"}}
       }) {
-      totalCount
       edges {
         node {
           id
@@ -38,6 +37,7 @@ query {
             subject
             title
             unit
+            homework
           }
           excerpt
           fields{

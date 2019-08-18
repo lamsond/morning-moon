@@ -1,8 +1,9 @@
 ---
 title: "Graphing Hyperbolas"
 unit: Conic Sections
-date: "2019-07-22"
+date: "2019-09-04"
 subject: "Algebra 1"
+homework: "Read chapter 1 in textbook"
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing 
 elit, sed do eiusmod tempor incididunt ut labore et 
