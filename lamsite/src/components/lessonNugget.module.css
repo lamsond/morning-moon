@@ -9,4 +9,9 @@
 .hw_label{
     color: hsl(190, 35%, 25%);
     display: inline-block;
+    font-style: bolder;
+}
+
+.excerpt{
+    margin-bottom: 15px;
 }
