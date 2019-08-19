@@ -1,8 +1,10 @@
 import React from "react"
+import { graphql } from 'gatsby';
+
 import Layout from "../components/layout.js";
 import LessonList from "../components/lessonList.js";
 import coursesStyles from './courses.module.css';
-import { graphql } from 'gatsby';
+
 
 export default ({ data }) => (
 <Layout>
