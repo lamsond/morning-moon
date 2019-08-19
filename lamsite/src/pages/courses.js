@@ -10,7 +10,7 @@ export default ({ data }) => (
     <ul className={coursesStyles.list}>
         <li>Algebra 1
             <ul>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
+                {data.alg.edges.map(({ node }) => (
                 <LessonList 
                     key={node.id}
                     title={node.frontmatter.title}
@@ -18,16 +18,33 @@ export default ({ data }) => (
                 />))}
             </ul>
         </li>
-        
-        <li>AP Computer Science Principles</li>
-        <li>AP Computer Science A</li>
+        <li>AP Computer Science Principles
+            <ul>
+                {data.csp.edges.map(({ node }) => (
+                <LessonList 
+                    key={node.id}
+                    title={node.frontmatter.title}
+                    slug={node.fields.slug}
+                />))}
+            </ul>
+        </li>
+        <li>AP Computer Science A
+            <ul>
+                {data.csa.edges.map(({ node }) => (
+                <LessonList 
+                    key={node.id}
+                    title={node.frontmatter.title}
+                    slug={node.fields.slug}
+                />))}
+            </ul>
+        </li>
     </ul>
 </Layout>
 );
 
 export const query = graphql`
 query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
+    alg: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
       filter: { frontmatter: {subject: {eq: "Algebra 1"}}
       }) {
       edges {
@@ -43,5 +60,37 @@ query {
         }
       }
     }
+    csp: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
+        filter: { frontmatter: {subject: {eq: "AP Computer Science Principles"}}
+        }) {
+        edges {
+          node {
+            id
+            frontmatter {
+              subject
+              title
+            }
+            fields{
+                slug
+            }
+          }
+        }
+      }
+      csa: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
+        filter: { frontmatter: {subject: {eq: "AP Computer Science A"}}
+        }) {
+        edges {
+          node {
+            id
+            frontmatter {
+              subject
+              title
+            }
+            fields{
+                slug
+            }
+          }
+        }
+      }
   }
   `;

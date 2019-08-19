@@ -1,7 +1,10 @@
 .list{
-    list-style-type: none;
     font-size: 1.3rem;
     color: hsl(190, 35%, 25%);
+}
+
+.list, .list ul{
+    list-style-type: none;
 }
 
 .list > li:hover{
