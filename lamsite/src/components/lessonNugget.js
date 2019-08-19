@@ -15,7 +15,7 @@ export default (props) => {
                 <h5 className={lessonNuggetStyles.hw_label}>HOMEWORK:&nbsp;</h5>
                 { props.homework } 
             </p>
-            <hr />
+            <hr className={lessonNuggetStyles.hr} />
         </div>
     );
 }
