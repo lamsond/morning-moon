@@ -1,6 +1,7 @@
 import React from 'react';
-import topStyles from './top.module.css';
 import { Link } from 'gatsby';
+
+import topStyles from './top.module.css';
 
 export default () => {
 
