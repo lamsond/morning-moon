@@ -39,6 +39,16 @@ export default ({ data }) => (
                 />))}
             </ul>
         </li>
+        <li>Jamstack
+            <ul>
+                {data.jam.edges.map(({ node }) => (
+                <LessonList 
+                    key={node.id}
+                    title={node.frontmatter.title}
+                    slug={node.fields.slug}
+                />))}
+            </ul>
+        </li>
     </ul>
 </Layout>
 );
@@ -78,6 +88,22 @@ query {
       }
       react: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
         filter: { frontmatter: {subject: {eq: "react"}}
+        }) {
+        edges {
+          node {
+            id
+            frontmatter {
+              subject
+              title
+            }
+            fields{
+                slug
+            }
+          }
+        }
+      }
+      jam: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, 
+        filter: { frontmatter: {subject: {eq: "jam-stack"}}
         }) {
         edges {
           node {
